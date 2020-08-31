@@ -12,7 +12,7 @@
      -->
 
 <!DOCTYPE html>
-<html lang="pt_br">
+<html lang="pt-br">
 <!--lang é um atributo-->
 
 <head>
@@ -34,6 +34,7 @@
         rel="stylesheet" />
 
     <script src="/scripts/addField.js" defer> </script>
+    <script src="/scripts/ODGMask.js" defer> </script>
 
 </head>
 
@@ -67,7 +68,7 @@
                     </div>
                     <div class="input-block">
                         <label for="whatsapp">Whatsapp<small> (somente números)</small></label>
-                        <input type="number" name="whatsapp" id="whatsapp" required />
+                        <input type="text" placeholder="(00) 0000-0000" odg-mask="(00) 0000-0000" name="whatsapp" id="whatsapp" required/>
                     </div>
                     <div class="textarea-block">
                         <label for="bio">Biografia</label>
@@ -80,17 +81,13 @@
                     <div class="select-block">
                         <label for="subject"> Matéria</label>
                         <select name="subject" id="subject" required>
-                            <option value="" hidden="">Selecione uma opção</option>
-                            <option value="1">Artes</option>
-                            <option value="2">Biologia</option>
-                            <option value="3">Ciências</option>
-                            <option value="4">Educação física</option>
-                            <option value="5">Física</option>
-                            <option value="6">Geografia</option>
-                            <option value="7">História</option>
-                            <option value="8">Matemática</option>
-                            <option value="9">Português</option>
-                            <option value="10">Química</option>
+
+                            {%for subject in subjects %}
+                            <option value="{{loop.index}}">
+                                {{subject}}
+                            </option>
+                            {%endfor%}
+
                         </select>
                     </div>
                     <div class="input-block">
@@ -112,14 +109,13 @@
                         <div class="select-block">
                             <label for="weekday">Dia da semana</label>
                             <select name="weekday[]" required>
-                                <option value="" hidden="">Selecione uma opção</option>
-                                <option value="0">Domingo</option>
-                                <option value="1">Segunda-feira</option>
-                                <option value="2">Terça-feira</option>
-                                <option value="3">Quarta-feira</option>
-                                <option value="4">Quinta-feira</option>
-                                <option value="5">Sexta-feira</option>
-                                <option value="6">Sábado</option>
+
+                                {%for weekday in weekdays %}
+                                <option value="{{loop.index0}}">
+                                    {{weekday}}
+                                </option>
+                                {%endfor%}
+
                             </select>
                         </div>
 

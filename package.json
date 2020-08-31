@@ -1,0 +1,29 @@
+{
+  "name": "proffy_vanilla",
+  "version": "0.0.4",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CabanillasHD/Proffy-Vanilla.git"
+  },
+  "keywords": [],
+  "author": "Henrique Cabanillas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CabanillasHD/Proffy-Vanilla/issues"
+  },
+  "homepage": "https://github.com/CabanillasHD/Proffy-Vanilla#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nunjucks": "^3.2.2",
+    "sqlite-async": "^1.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}

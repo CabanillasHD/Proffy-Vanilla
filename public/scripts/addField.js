@@ -9,19 +9,19 @@ function cloneField() {
     console.log("Cheguei aqui");
 
     //Duplicar os campos. Que campos ?
-    const newFieldContainer = document.querySelector(".schedule-item").cloneNode(true) //boolean: true or false
+    const newFieldContainer = document.querySelector(".schedule-item").cloneNode(true); //boolean: true or false
 
     //limpar os campos, que campos ?
-    const fields = newFieldContainer.querySelectorAll('input')
+    const fields = newFieldContainer.querySelectorAll('input');
 
     // fields[0].value = ""
     // fields[1].value = ""
     
     fields.forEach(function(field){
-        field.value = ""
-    })
+        field.value = "";
+    });
 
     //Colocar na página, onde ?
-    document.querySelector("#schedule-items").appendChild(newFieldContainer)
+    document.querySelector("#schedule-items").appendChild(newFieldContainer);
 
 }

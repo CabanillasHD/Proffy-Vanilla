@@ -107,7 +107,7 @@
     display: block;
 }
 
-.teacher-item footer button {
+.teacher-item footer .button {
     width: 20rem;
     height: 5.6rem;
     background: var(--color-secondary);
@@ -116,6 +116,7 @@
     border-radius: .8rem;
     cursor: pointer;
     font: 700 1.4rem Archivo;
+    text-decoration: none;
 
     display: flex;
     align-items: center;
